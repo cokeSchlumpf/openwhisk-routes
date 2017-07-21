@@ -1,6 +1,13 @@
 # openwhisk-routes - Implement routes within you OpenWhisk actions [![dependency status](https://david-dm.org/cokeSchlumpf/openwhisk-routes.svg)](https://david-dm.org/cokeSchlumpf/openwhisk-routes)
 
-This package allows you to implement basic routing within an OpenWhisk web action. Example:
+This package allows you to implement basic routing within an OpenWhisk web action. 
+
+See also:
+
+* [OpenWhisk actions](https://console.bluemix.net/docs/openwhisk/openwhisk_actions.html#openwhisk_actions)
+* [OpenWhisk WebActions](https://console.bluemix.net/docs/openwhisk/openwhisk_webactions.html#openwhisk_webactions)
+
+Example:
 
 ```javascript
 const routes = require('openwhisk-routes');
