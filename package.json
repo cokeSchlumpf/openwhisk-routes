@@ -1,0 +1,17 @@
+{
+  "name": "openwhisk-routes",
+  "version": "0.0.1",
+  "description": "Implement routes within your OpenWhisk actions",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "keywords": [
+    "openwhisk"
+  ],
+  "author": "Michael Wellner <michael.wellner@de.ibm.com>",
+  "license": "ISC",
+  "dependencies": {
+    "router": "^1.3.1"
+  }
+}
