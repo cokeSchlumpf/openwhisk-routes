@@ -19,8 +19,6 @@ exports.main = routes((action) => {
 
 ## Installation
 
-Installation:
-
 ```bash
 npm install --save openwhisk-routes
 ```

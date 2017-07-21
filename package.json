@@ -1,6 +1,6 @@
 {
   "name": "openwhisk-routes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Implement routes within your OpenWhisk actions",
   "main": "index.js",
   "scripts": {
