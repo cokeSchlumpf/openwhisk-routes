@@ -1,4 +1,4 @@
-# openwhisk-routes - Implement routes within you OpenWhisk actions [![dependency status](https://david-dm.org/cokeSchlumpf/openwhisk-routes.svg)](https://david-dm.org/cokeSchlumpf/openwhisk-routes)
+# openwhisk-routes - Implement routes within your OpenWhisk actions [![dependency status](https://david-dm.org/cokeSchlumpf/openwhisk-routes.svg)](https://david-dm.org/cokeSchlumpf/openwhisk-routes)
 
 This package allows you to implement basic routing within an OpenWhisk web action. 
 
