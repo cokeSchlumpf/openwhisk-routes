@@ -8,7 +8,7 @@ const defaultOptions = {
 }
 
 const createRequest = (params, options) => ({
-  body: _.pickBy(params, (value, key) => key.startsWith('__') || _.indexOf(options.ignoreProperties, key) > -1),
+  body: _.pickBy(params, (value, key) => !(key.startsWith('__') || _.indexOf(options.ignoreProperties, key) > -1)),
   url: params.__ow_path || '/',
   method: (params.__ow_method || 'get').toUpperCase(),
   params: {},
