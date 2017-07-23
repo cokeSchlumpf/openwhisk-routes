@@ -1,5 +1,10 @@
-const fs = require('fs');
+const _ = require('lodash');
 const Router = require('router');
+
+const defaultOptions = {
+  init: () => {},
+  destruct: () => {}
+}
 
 const createRequest = (params) => ({
   url: params.__ow_path || '/',
@@ -22,13 +27,18 @@ const createResponse = (resolve, reject, options = {}) => ({
   html: (html) => end('text/html', html)(resolve, reject, options),
   json: (json) => end('application/json', new Buffer(JSON.stringify(json, null, 2)).toString('base64'))(resolve, reject, options),
   send: (text) => end('text/plain', text)(resolve, reject, options),
+  sendStatus: (status) => end('application/json')(resolve, reject, Object.assign({}, options, { status })),
   redirect: (location) => createResponse(resolve, reject, { headers: { location }, statusCode: 302 }),
   ok: () => end('text/plain')(resolve, reject, options)
 });
 
-module.exports = (init) => (params = {}) => new Promise((resolve, reject) => {
+module.exports = (init, customOptions = {}) => (params = {}) => new Promise((resolve, reject) => {
+  const options = _.assign({}, customOptions, defaultOptions);
   const app = Router({ mergeParams: true });
+
+  options.init();
   init(app);
-  app.use((req, res) => res.status(404).html('<h1>404 - Not Found</h1>'));
+  app.use((req, res) => res.status(404).send('Not found'));
   app(createRequest(params), createResponse(resolve, reject, {}), (error, response) => { })
+  options.destruct();
 });
