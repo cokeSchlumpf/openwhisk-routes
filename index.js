@@ -41,6 +41,6 @@ module.exports = (init, customOptions = {}) => (params = {}) => new Promise((res
   options.init();
   init(app);
   app.use((req, res) => res.status(404).send('Not found'));
-  app(createRequest(params), createResponse(resolve, reject, {}), (error, response) => { })
+  app(createRequest(params, options), createResponse(resolve, reject, {}), (error, response) => { })
   options.destruct();
 });
