@@ -33,7 +33,7 @@ const createResponse = (resolve, reject, options = {}) => ({
 });
 
 module.exports = (init, customOptions = {}) => (params = {}) => new Promise((resolve, reject) => {
-  const options = _.assign({}, customOptions, defaultOptions);
+  const options = _.assign({}, defaultOptions, customOptions);
   const app = Router({ mergeParams: true });
 
   options.init();

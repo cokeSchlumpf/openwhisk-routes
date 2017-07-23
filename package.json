@@ -1,6 +1,6 @@
 {
   "name": "openwhisk-routes",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Michael Wellner <michael.wellner@de.ibm.com>",
   "description": "Implement routes within your OpenWhisk actions",
   "license": "ISC",
