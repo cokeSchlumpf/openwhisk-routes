@@ -1,13 +1,13 @@
 {
   "name": "openwhisk-routes",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Michael Wellner <michael.wellner@de.ibm.com>",
   "description": "Implement routes within your OpenWhisk actions",
   "license": "ISC",
   "repository": "https://github.com/cokeSchlumpf/openwhisk-routes",
   "main": "index.js",
   "scripts": {
-    "test": "node test"
+    "test": "mocha"
   },
   "keywords": [
     "openwhisk"
@@ -15,5 +15,9 @@
   "dependencies": {
     "lodash": "^4.17.4",
     "router": "^1.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
   }
 }
